@@ -8,25 +8,15 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvbill"
-        android:layout_width="50dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="48dp"
-        android:text="Bill "
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvtipbar"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/tvtipbar"
         android:layout_width="50dp"
         android:layout_height="34dp"
         android:layout_marginTop="40dp"
-        android:text="24%"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/tvtip"
-        app:layout_constraintTop_toBottomOf="@+id/tvbill" />
+        app:layout_constraintTop_toBottomOf="@+id/tvbill"
+        tools:text="24%" />
 
     <TextView
         android:id="@+id/tvtip"
@@ -40,24 +30,37 @@
 
     <TextView
         android:id="@+id/tvtotal"
-        android:layout_width="59dp"
+        android:layout_width="65dp"
         android:layout_height="37dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
         android:text="Total"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/tvtip"
-        tools:layout_editor_absoluteX="23dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtip" />
+
+    <TextView
+        android:id="@+id/tvbill"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="64dp"
+        android:text="Bill "
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvtipbar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etbill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:ems="8"
         android:hint="Bill Amount"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/tvbill"
+        app:layout_constraintStart_toEndOf="@+id/tvbill"
         app:layout_constraintTop_toTopOf="@+id/tvbill"
-        tools:layout_editor_absoluteX="136dp" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <SeekBar
         android:id="@+id/tipseekbar"
