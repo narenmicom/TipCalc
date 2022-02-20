@@ -2,18 +2,92 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/backgroundView"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvbill"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="48dp"
+        android:text="Bill "
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvtipbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtipbar"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:text="24%"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvtip"
+        app:layout_constraintTop_toBottomOf="@+id/tvbill" />
+
+    <TextView
+        android:id="@+id/tvtip"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:text="Tip"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvtotal"
+        app:layout_constraintTop_toBottomOf="@+id/tvtipbar" />
+
+    <TextView
+        android:id="@+id/tvtotal"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="40dp"
+        android:text="Total"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvtip"
+        tools:layout_editor_absoluteX="23dp" />
+
+    <EditText
+        android:id="@+id/etbill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="8"
+        android:hint="Bill Amount"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/tvbill"
+        app:layout_constraintTop_toTopOf="@+id/tvbill"
+        tools:layout_editor_absoluteX="136dp" />
+
+    <SeekBar
+        android:id="@+id/tipseekbar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@+id/tvtipbar"
+        app:layout_constraintStart_toStartOf="@+id/etbill"
+        app:layout_constraintTop_toTopOf="@+id/tvtipbar" />
+
+    <TextView
+        android:id="@+id/tvtipans"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvtip"
+        app:layout_constraintStart_toStartOf="@+id/tipseekbar"
+        app:layout_constraintTop_toTopOf="@+id/tvtip"
+        tools:text="19.96" />
+
+    <TextView
+        android:id="@+id/tvtotalans"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvtotal"
+        app:layout_constraintStart_toStartOf="@+id/tvtipans"
+        app:layout_constraintTop_toTopOf="@+id/tvtotal"
+        tools:text="103.11" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
