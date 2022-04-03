@@ -1,5 +1,5 @@
 # Tip - A Simple Tip Calculator
 
 <p float="middle">
-    <img src="https://raw.githubusercontent.com/narenmicom/TipCalc/main/demo.gif" width="250">
+    <img src="https://github.com/narenmicom/TipCalc/blob/master/demo.gif" width="250">
 </p>
